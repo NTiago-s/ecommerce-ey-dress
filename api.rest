@@ -1,0 +1,14 @@
+
+GET http://localhost:1337/api/products?fields[0]=name&fields[1]=price&fields[2]=productID&populate[stock][populate][images][fields][0]=url
+Authorization: Bearer 08ac3d781d9abaa9d88a75aed371e497cd7b0c35b64039080fc2bdaf6eaf9914857282f2894616299436e84a17d6c36ba0fe619d0fb62a77eab350023571dee842da8b7c5ba2a0df4e838e2fe00ac7d55ed9eac151f555f4c7bfdfa619a821611ad54773907ba08071a148c02884a6ea060160b01aecf056109e2f1598e718c2
+
+###
+
+GET http://localhost:1337/api/categories
+Authorization: Bearer 08ac3d781d9abaa9d88a75aed371e497cd7b0c35b64039080fc2bdaf6eaf9914857282f2894616299436e84a17d6c36ba0fe619d0fb62a77eab350023571dee842da8b7c5ba2a0df4e838e2fe00ac7d55ed9eac151f555f4c7bfdfa619a821611ad54773907ba08071a148c02884a6ea060160b01aecf056109e2f1598e718c2
+
+
+###
+
+GET http://localhost:1337/api/products?fields[0]=name&fields[1]=price&populate[stock][fields][0]=quantity&populate[stock][populate][images][fields][0]=url&populate[stock][populate][size_stock][fields][0]=name&populate[stock][fields][1]=color
+Authorization: Bearer 08ac3d781d9abaa9d88a75aed371e497cd7b0c35b64039080fc2bdaf6eaf9914857282f2894616299436e84a17d6c36ba0fe619d0fb62a77eab350023571dee842da8b7c5ba2a0df4e838e2fe00ac7d55ed9eac151f555f4c7bfdfa619a821611ad54773907ba08071a148c02884a6ea060160b01aecf056109e2f1598e718c2
