@@ -3,19 +3,21 @@
 /* General */
 
 :root {
-  --background: #0b151d ;
-  --primary: #8D99AE ;
-  --secondary: #BDC3C7 ;
-  --glass: #0b151daa;
-  --primary-txt: #EDF2F4 ;
-  --secondary-txt: #1E90FF;
-  --error: #EF233C;
+  --background: #ffffff;         /* Blanco puro para fondo limpio */
+  --secondary-bg: #f2f2f2;       /* Gris muy claro como fondo secundario */
+  --primary: #1e1e2f;            /* Azul oscuro con tinte violeta, elegante y moderno */
+  --secondary: #c9ada7;          /* Rosa pálido neutro, da suavidad y sofisticación */
+  --glass: #ffffffaa;            /* Blanco semitransparente para efecto glass */
+  --primary-txt: #111111;        /* Casi negro para legibilidad óptima */
+  --secondary-txt: #6c5ce7;      /* Lavanda vibrante como acento */
+  --error: #e74c3c;              /* Rojo vivo para errores o alertas */
   scrollbar-width: thin;
   scrollbar-color: var(--primary) var(--background);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-secondary-bg: var(--secondary-bg);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-primary-txt: var(--primary-txt);
@@ -23,6 +25,7 @@
   --color-error: var(--error);
   --color-glass: var(--glass);
 }
+
 
 body {
   display: grid;
