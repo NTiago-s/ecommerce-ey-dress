@@ -3,14 +3,14 @@
 /* General */
 
 :root {
-  --background: #ffffff;         /* Blanco puro para fondo limpio */
-  --secondary-bg: #f2f2f2;       /* Gris muy claro como fondo secundario */
-  --primary: #1e1e2f;            /* Azul oscuro con tinte violeta, elegante y moderno */
-  --secondary: #c9ada7;          /* Rosa pálido neutro, da suavidad y sofisticación */
-  --glass: #ffffffaa;            /* Blanco semitransparente para efecto glass */
-  --primary-txt: #111111;        /* Casi negro para legibilidad óptima */
-  --secondary-txt: #6c5ce7;      /* Lavanda vibrante como acento */
-  --error: #e74c3c;              /* Rojo vivo para errores o alertas */
+  --background: #ffffff;
+  --secondary-bg: #f2f2f2;
+  --primary: #1e1e2f;
+  --secondary: #c9ada7;
+  --glass: #ffffffaa;
+  --primary-txt: #111111;
+  --secondary-txt: #6c5ce7;
+  --error: #e74c3c;
   scrollbar-width: thin;
   scrollbar-color: var(--primary) var(--background);
 }
@@ -26,15 +26,26 @@
   --color-glass: var(--glass);
 }
 
-
 body {
   display: grid;
   min-height: 100vh;
-  grid-template-rows: auto 1fr auto ;
-  background:var(--background);
+  grid-template-rows: auto 1fr auto;
+  background: var(--background);
 }
 
+/* Custom Keyframes and Animation */
+@keyframes pulse-custom {
+  0% {
+    box-shadow: 0 0 0 0 #05bada66;
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(218, 103, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(218, 103, 68, 0);
+  }
+}
 
-h1{
-  color: var(--primary-txt);
+.hover\:animate-pulse-custom:hover {
+  animation: pulse-custom 1.5s infinite;
 }

@@ -2,10 +2,13 @@ import { ReactNode } from "react";
 
 interface TitleProps {
   children: ReactNode;
+  className?: string;
 }
-export default function Title({ children }: TitleProps) {
+export default function Title({ children, className }: TitleProps) {
   return (
-    <h1 className="text-4xl text-balance text-primary-txt ont-semibold underline">
+    <h1
+      className={`${className} text-4xl text-balance font-semibold underline`}
+    >
       {children}
     </h1>
   );

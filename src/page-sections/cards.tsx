@@ -17,7 +17,7 @@ export default async function Cards() {
             <Link
               href={`/${product.productID}`}
               key={product.id}
-              className="bg-white rounded shadow-xl cursor-pointer group relative p-4"
+              className="bg-white rounded shadow-xl cursor-pointer group relative p-2"
             >
               <div className="overflow-hidden rounded-md">
                 <img
