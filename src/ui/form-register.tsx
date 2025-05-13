@@ -37,7 +37,7 @@ export default function FormRegister() {
             Inicia sesión
           </Link>
         </p>
-        <div className="w-full flex flex-col justify-start mt-6">
+        <div className="w-full flex flex-col justify-start mt-10">
           <div className="rounded-[20px] box-border px-[15px] py-[10px] shadow-[0_10px_36px_rgba(0,0,0,0.16),_0_0_0_1px_rgba(0,0,0,0.06)] cursor-pointer flex justify-center items-center font-sans text-sm gap-[5px] border-[2px] border-[#747474]">
             <img src="/google.webp" alt="Logo-Google" className="size-8" />
             <span>Iniciar con Google</span>
