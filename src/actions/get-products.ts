@@ -14,6 +14,8 @@ export async function GetProducts() {
 
   const { data } = await response.json();
 
+  console.log({ data });
+
   const products = data.map((product: any) => {
     const { name, price, stock, id, productID } = product;
 
@@ -27,6 +29,8 @@ export async function GetProducts() {
       image: firstImage?.url || null,
     };
   });
+
+  console.log({ products });
 
   return { products };
 }
