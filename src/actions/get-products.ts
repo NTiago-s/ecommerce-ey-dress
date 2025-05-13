@@ -3,7 +3,7 @@
 import { GetProductsQuery } from "@/utils/querys";
 
 export async function GetProducts() {
-  const token = process.env.STRAPI_TOKEN;
+  const token = process.env.STRAPI_TOKEN_PRODUCTION;
   const response = await fetch(`${GetProductsQuery}`, {
     method: "GET",
     headers: {
@@ -24,7 +24,9 @@ export async function GetProducts() {
       id,
       price,
       productID,
-      image: firstImage ? `${process.env.STRAPI_HOST}${firstImage.url}` : null,
+      image: firstImage
+        ? `${process.env.STRAPI_HOST_PRODUCTION}${firstImage.url}`
+        : null,
     };
   });
 

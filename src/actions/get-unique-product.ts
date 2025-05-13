@@ -2,7 +2,7 @@
 import { GetProductByIdQuery } from "@/utils/querys";
 
 export async function GetProductById(productID: string) {
-  const token = process.env.STRAPI_TOKEN;
+  const token = process.env.STRAPI_TOKEN_PRODUCTION;
 
   const response = await fetch(`${GetProductByIdQuery}${productID}`, {
     method: "GET",
@@ -23,7 +23,7 @@ export async function GetProductById(productID: string) {
     stock?.map((item: any) => ({
       ...item,
       images: item.images.map(
-        (img: any) => `${process.env.STRAPI_HOST}${img.url}`
+        (img: any) => `${process.env.STRAPI_HOST_PRODUCTION}${img.url}`
       ),
     })) || [];
 

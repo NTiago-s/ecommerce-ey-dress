@@ -3,7 +3,7 @@
 import { GetCategoriesQuery } from "@/utils/querys";
 
 export async function GetCategories() {
-  const token = process.env.STRAPI_TOKEN;
+  const token = process.env.STRAPI_TOKEN_PRODUCTION;
 
   const response = await fetch(`${GetCategoriesQuery}`, {
     method: "GET",
