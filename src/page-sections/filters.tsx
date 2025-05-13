@@ -1,3 +1,3 @@
 export default function filterProducts() {
-  return <div></div>;
+  return <div>hola</div>;
 }
