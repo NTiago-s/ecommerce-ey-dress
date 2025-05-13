@@ -22,9 +22,7 @@ export async function GetProductById(productID: string) {
   const stockWithImages =
     stock?.map((item: any) => ({
       ...item,
-      images: item.images.map(
-        (img: any) => `${process.env.STRAPI_HOST_PRODUCTION}${img.url}`
-      ),
+      images: item.images.map((img: any) => img.url),
     })) || [];
 
   return {

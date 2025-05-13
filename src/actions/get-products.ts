@@ -24,9 +24,7 @@ export async function GetProducts() {
       id,
       price,
       productID,
-      image: firstImage
-        ? `${process.env.STRAPI_HOST_PRODUCTION}${firstImage.url}`
-        : null,
+      image: firstImage?.url || null,
     };
   });
 
