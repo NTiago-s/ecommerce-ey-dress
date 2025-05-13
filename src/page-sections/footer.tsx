@@ -37,14 +37,14 @@ export default function Footer() {
           <div>
             <h3 className="font-bold mb-1">Medios de pago</h3>
             <div className="flex flex-wrap gap-1">
-              <img src="/visa.png" alt="Visa" className="h-6" />
-              <img src="/mastercard.png" alt="Mastercard" className="h-6" />
+              <img src="/visa.webp" alt="Visa" className="h-6" />
+              <img src="/mastercard.webp" alt="Mastercard" className="h-6" />
             </div>
           </div>
           <div>
             <h3 className="font-bold mb-1">Medios de envío</h3>
             <img
-              src="/correo-argentino.png"
+              src="/correo-argentino.webp"
               alt="Correo Argentino"
               className="h-6"
             />

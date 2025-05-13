@@ -1,7 +1,7 @@
-import ButtonLogin from "@/ui/button-login";
+import ButtonLogin from "@/ui/button";
 import SearchBar from "@/ui/search-bar";
 import Link from "next/link";
-
+import { IconLogin2 } from "@tabler/icons-react";
 export default function Header() {
   return (
     <header>
@@ -14,7 +14,9 @@ export default function Header() {
           />
         </Link>
         <SearchBar />
-        <ButtonLogin />
+        <Link href="/login">
+          <ButtonLogin icon={<IconLogin2 />} text="Login" />
+        </Link>
       </div>
     </header>
   );
