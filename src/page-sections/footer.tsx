@@ -39,6 +39,7 @@ export default function Footer() {
             <div className="flex flex-wrap gap-1">
               <img src="/visa.webp" alt="Visa" className="h-6" />
               <img src="/mastercard.webp" alt="Mastercard" className="h-6" />
+              <img src="/mercadopago.webp" alt="Mercado Pago" className="h-6" />
             </div>
           </div>
           <div>

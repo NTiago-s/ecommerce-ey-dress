@@ -9,18 +9,18 @@ import {
 
 export const navOptions = [
   {
-    title: "HOME",
+    title: "INICIO",
     href: "/",
     icon: IconHome,
   },
 
   {
-    title: "MENU",
+    title: "PRODUCTOS",
     href: "#Carta",
     icon: IconClipboardText,
   },
   {
-    title: "CONCEPTO",
+    title: "RESEÑAS",
     href: "#",
     icon: IconContract,
   },
