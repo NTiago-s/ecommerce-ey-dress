@@ -1,10 +1,10 @@
 import {
   IconInfoCircle,
-  IconClipboardText,
   IconBrandInstagram,
   IconHome,
-  IconContract,
   IconMapPin,
+  IconStars,
+  IconShoppingBag,
 } from "@tabler/icons-react";
 
 export const navOptions = [
@@ -17,12 +17,12 @@ export const navOptions = [
   {
     title: "PRODUCTOS",
     href: "#Carta",
-    icon: IconClipboardText,
+    icon: IconShoppingBag,
   },
   {
     title: "RESEÑAS",
     href: "#",
-    icon: IconContract,
+    icon: IconStars,
   },
   {
     title: "UBICACION",

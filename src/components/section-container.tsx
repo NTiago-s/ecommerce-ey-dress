@@ -6,8 +6,10 @@ interface SectionContainerProps {
 
 export default function SectionContainer({ children }: SectionContainerProps) {
   return (
-    <section className="rounded-xl w-full flex flex-col items-center justify-center">
-      {children}
+    <section className="flex justify-center py-12 px-4">
+      <div className="flex flex-col w-full max-w-screen-xl gap-4">
+        {children}
+      </div>
     </section>
   );
 }

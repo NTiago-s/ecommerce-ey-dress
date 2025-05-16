@@ -6,7 +6,7 @@ import { IconLogin2 } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 import NavButton from "@/ui/nav-mobile-button";
 import NavOptionsMenu from "@/ui/nav-options-menu";
-import { navOptions } from "@/utils/constants";
+import { navOptions } from "@/utils/nav-options";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -35,7 +35,7 @@ export default function Header() {
           <SearchBar />
         </div>
         <Link href="/login" className="hidden md:flex">
-          <Button icon={<IconLogin2 />} text="Login" />
+          <Button icon={<IconLogin2 />} text="Iniciar Sesión" />
         </Link>
 
         <div id="nav-button" className="absolute right-4 mt-4 md:hidden">
@@ -48,6 +48,18 @@ export default function Header() {
         {isOpen && (
           <NavOptionsMenu data={navOptions} onSelect={() => setIsOpen(false)} />
         )}
+      </div>
+      <div className=" hidden md:flex justify-center items-center gap-4">
+        {navOptions.map((option, index) => (
+          <Link
+            key={index}
+            href={option.href}
+            className="flex text-sm font-light items-center p-2 gap-1 hover:underline"
+          >
+            {option.icon && <option.icon className="size-5" />}
+            {option.title}
+          </Link>
+        ))}
       </div>
     </header>
   );

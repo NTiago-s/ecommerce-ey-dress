@@ -30,7 +30,7 @@ export default function NavOptionsMenu({
       ))}
 
       <Link href="/login" className="flex">
-        <Button icon={<IconLogin2 />} text="Login" />
+        <Button icon={<IconLogin2 />} text="Iniciar Sesión " />
       </Link>
     </div>
   );

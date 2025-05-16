@@ -1,0 +1,28 @@
+import { IconBrandInstagram, IconBrandWhatsapp } from "@tabler/icons-react";
+import Link from "next/link";
+
+export default function Contact() {
+  return (
+    <aside className="flex flex-col gap-4 w-full justify-center items-center p-8 bg-slate-100 ">
+      <Link
+        href="https://www.instagram.com/ey_dress25?igsh=dnJzaGtzdGlkd2Y="
+        className="flex w-full max-w-xl mx-auto gap-2 justify-center items-center text-black shadow shadow-black"
+      >
+        <IconBrandInstagram className="size-20 stroke-1" />
+        <div className="flex flex-col  text-lg">
+          <span>Seguinos en Instagram</span>
+          <span>@ey_dress25</span>
+        </div>
+      </Link>
+      <Link
+        href="https://www.instagram.com/ey_dress25?igsh=dnJzaGtzdGlkd2Y="
+        className="flex w-full max-w-xl mx-auto gap-2 justify-center items-center text-black shadow shadow-black"
+      >
+        <IconBrandWhatsapp className="size-20 stroke-1" />
+        <div className="flex flex-col  text-lg">
+          <span>Hablame al Whatsapp</span>
+        </div>
+      </Link>
+    </aside>
+  );
+}
