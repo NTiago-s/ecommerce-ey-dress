@@ -20,7 +20,7 @@ export default function Map() {
         height: "500px",
         width: "100%",
         borderRadius: "12px",
-        overflow: "hidden",
+        zIndex: "30",
       }}
     >
       <TileLayer

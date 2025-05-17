@@ -22,13 +22,13 @@ export default function Header() {
   }, []);
 
   return (
-    <header>
+    <header className="sticky top-0 z-50 bg-secondary-bg">
       <div className="flex bg-secondary-bg justify-between items-center mx-auto py-2 px-8">
         <Link href="/" className="hover:opacity-40">
           <img
             src="/Ey-Dress-Blanco.webp"
             alt="Logo"
-            className="rounded-full size-16 aspect-square object-cover border-1 p-1"
+            className="rounded-full size-14 md:size-16 aspect-square object-cover border-1 p-1"
           />
         </Link>
         <div className="hidden md:flex">
@@ -38,7 +38,7 @@ export default function Header() {
           <Button icon={<IconLogin2 />} text="Iniciar Sesión" />
         </Link>
 
-        <div id="nav-button" className="absolute right-4 mt-4 md:hidden">
+        <div id="nav-button" className="absolute right-4 md:hidden">
           <NavButton
             isOpen={isOpen}
             toggle={() => setIsOpen((prev) => !prev)}
@@ -49,7 +49,7 @@ export default function Header() {
           <nav>
             <NavOptionsMenu
               data={navOptions}
-              onSelect={() => setIsOpen(false)}
+              onClick={() => setIsOpen(false)}
             />
           </nav>
         )}

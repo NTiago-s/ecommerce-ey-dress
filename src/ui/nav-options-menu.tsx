@@ -6,15 +6,12 @@ import { IconLogin2 } from "@tabler/icons-react";
 
 interface NavOptionsMenuProps {
   data: NavOption[];
-  onSelect: () => void;
+  onClick: () => void;
 }
 
-export default function NavOptionsMenu({
-  data,
-  onSelect,
-}: NavOptionsMenuProps) {
+export default function NavOptionsMenu({ data, onClick }: NavOptionsMenuProps) {
   return (
-    <div className="flex flex-col gap-4 w-full left-0 absolute top-[75px] bg-background p-6 rounded-b-xl shadow-lg z-20 md:hidden">
+    <div className="flex flex-col gap-4 w-full left-0 absolute top-[72px] bg-background p-6 rounded-b-xl shadow-lg z-20 md:hidden">
       <SearchBar />
       {data.map((option) => (
         <Link
@@ -23,16 +20,13 @@ export default function NavOptionsMenu({
           aria-label={option.title}
           title={option.title}
           className="text-primary-txt hover:bg-primary/10 px-4 py-2 flex items-center gap-2 rounded-xl transition"
-          onClick={(e) => {
-            e.preventDefault(); // Previene el comportamiento por defecto
-            onSelect(); // Cierra el modal
-          }}
+          onClick={onClick}
         >
           <option.icon /> {option.title}
         </Link>
       ))}
 
-      <Link href="/login" className="flex">
+      <Link href="/login" className="flex" onClick={onClick}>
         <Button icon={<IconLogin2 />} text="Iniciar Sesión " />
       </Link>
     </div>
