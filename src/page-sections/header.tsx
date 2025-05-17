@@ -46,7 +46,12 @@ export default function Header() {
         </div>
 
         {isOpen && (
-          <NavOptionsMenu data={navOptions} onSelect={() => setIsOpen(false)} />
+          <nav>
+            <NavOptionsMenu
+              data={navOptions}
+              onSelect={() => setIsOpen(false)}
+            />
+          </nav>
         )}
       </div>
       <div className=" hidden md:flex justify-center items-center gap-4">

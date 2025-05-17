@@ -1,12 +1,11 @@
-import SectionContainer from "@/components/section-container";
 import DynamicMap from "@/ui/dynamic-map";
 import Title from "@/ui/title";
 
-export default function ContactPage() {
+export default function Ubication() {
   return (
-    <SectionContainer>
+    <div className="flex flex-col w-full max-w-screen-xl gap-4">
       <Title>Ubicación</Title>
       <DynamicMap />
-    </SectionContainer>
+    </div>
   );
 }

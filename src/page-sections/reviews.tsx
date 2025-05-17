@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import SectionContainer from "@/components/section-container";
 import Review from "@/ui/review";
 import Title from "@/ui/title";
 import { reviewsData } from "@/utils/reviews";
@@ -9,17 +8,15 @@ export default function Reviews() {
   const [visibleCount, setVisibleCount] = useState(2);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detectar tamaño de pantalla
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    handleResize(); // Verifica al montar
-    window.addEventListener("resize", handleResize); // Verifica en resize
+    handleResize();
+    window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Define cuántas reseñas mostrar
   const displayedReviews = isMobile
     ? reviewsData.slice(0, visibleCount)
     : reviewsData;
@@ -29,7 +26,7 @@ export default function Reviews() {
   };
 
   return (
-    <SectionContainer>
+    <div className="flex flex-col w-full max-w-screen-xl gap-4">
       <Title>Reseñas</Title>
 
       <div className="grid gap-6 md:grid-cols-3">
@@ -54,6 +51,6 @@ export default function Reviews() {
           </button>
         </div>
       )}
-    </SectionContainer>
+    </div>
   );
 }

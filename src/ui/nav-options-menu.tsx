@@ -23,7 +23,10 @@ export default function NavOptionsMenu({
           aria-label={option.title}
           title={option.title}
           className="text-primary-txt hover:bg-primary/10 px-4 py-2 flex items-center gap-2 rounded-xl transition"
-          onClick={onSelect}
+          onClick={(e) => {
+            e.preventDefault(); // Previene el comportamiento por defecto
+            onSelect(); // Cierra el modal
+          }}
         >
           <option.icon /> {option.title}
         </Link>

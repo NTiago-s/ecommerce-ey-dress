@@ -13,30 +13,29 @@ export const navOptions = [
     href: "/",
     icon: IconHome,
   },
-
   {
     title: "PRODUCTOS",
-    href: "#Carta",
+    href: "/#Products",
     icon: IconShoppingBag,
   },
   {
     title: "RESEÑAS",
-    href: "#",
+    href: "/#Reviews",
     icon: IconStars,
   },
   {
     title: "UBICACION",
-    href: "#",
+    href: "/#Ubication",
     icon: IconMapPin,
   },
   {
     title: "CONTACTO",
-    href: "#",
+    href: "/#Contact",
     icon: IconBrandInstagram,
   },
   {
     title: "SOBRE NOSOTROS",
-    href: "/info",
+    href: "/sobre-nosotros",
     icon: IconInfoCircle,
   },
 ];

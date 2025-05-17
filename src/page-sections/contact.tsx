@@ -20,7 +20,7 @@ export default function Contact() {
       >
         <IconBrandWhatsapp className="size-20 stroke-1" />
         <div className="flex flex-col  text-lg">
-          <span>Hablame al Whatsapp</span>
+          <span>Hablanos al Whatsapp</span>
         </div>
       </Link>
     </aside>

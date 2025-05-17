@@ -1,16 +1,15 @@
 import { GetProducts } from "@/actions/get-products";
-import SectionContainer from "@/components/section-container";
 import Title from "@/ui/title";
 import { NumberFormat } from "@/utils/number-format";
 import Link from "next/link";
 
-export default async function Cards() {
+export default async function Products() {
   const { products } = await GetProducts();
 
   if (!products) return null;
 
   return (
-    <SectionContainer>
+    <div className="flex flex-col w-full max-w-screen-xl gap-4">
       <Title>Productos</Title>
       <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         {products.map((product: any) => (
@@ -42,6 +41,6 @@ export default async function Cards() {
           </Link>
         ))}
       </div>
-    </SectionContainer>
+    </div>
   );
 }
