@@ -16,12 +16,7 @@ export default function Map() {
     <MapContainer
       center={[-38.579633, -58.734808]}
       zoom={15}
-      style={{
-        height: "500px",
-        width: "100%",
-        borderRadius: "12px",
-        zIndex: "30",
-      }}
+      className="h-[250px] md:h-[500px] w-full rounded-xl z-[30]"
     >
       <TileLayer
         attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a>'
