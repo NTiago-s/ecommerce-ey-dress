@@ -17,3 +17,14 @@ export type MenuItem = {
   protein: number;
   badges: string[];
 };
+
+export type ProductsType = {
+  name: any;
+  id: any;
+  image: string | null;
+  price: any;
+  colors: any;
+  stock: any;
+  description: any;
+  productID: string;
+};
