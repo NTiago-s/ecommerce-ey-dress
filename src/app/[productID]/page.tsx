@@ -4,7 +4,7 @@ import { use, useState, useEffect } from "react";
 import { GetProductById } from "@/actions/get-unique-product";
 import { NumberFormat } from "@/utils/number-format";
 import CartButton from "@/ui/cart-button copy";
-import SplideSlider from "@/ui/sliper-slide";
+import ImageGallery from "@/ui/image-gallery";
 
 export default function ProductDetail({
   params,
@@ -36,7 +36,7 @@ export default function ProductDetail({
     <section className="m-10">
       <div className="flex max-w-7xl mx-auto bg-white rounded shadow-xl justify-around p-10">
         <div>
-          <SplideSlider images={filteredImages} />
+          <ImageGallery images={filteredImages} />
         </div>
 
         <div className="flex flex-col gap-4 border-l pl-4">
