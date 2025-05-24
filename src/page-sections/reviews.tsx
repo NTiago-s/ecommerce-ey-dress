@@ -28,8 +28,7 @@ export default function Reviews() {
   return (
     <div className="flex flex-col w-full max-w-screen-xl gap-4">
       <Title>Reseñas</Title>
-
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="columns-3 gap-6">
         {displayedReviews.map((review, index) => (
           <Review
             key={index}

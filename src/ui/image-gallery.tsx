@@ -38,9 +38,9 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
   }, [mainApi, onSelect]);
 
   return (
-    <div className="flex gap-4 max-w-xl mx-auto">
+    <div className="flex flex-col-reverse md:flex-row gap-4 max-w-xl mx-auto">
       <div className="embla-thumbs" ref={thumbRef}>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-row md:flex-col gap-2">
           {images.map((src, index) => (
             <button
               key={index}

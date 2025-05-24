@@ -9,7 +9,7 @@ interface ReviewProps {
 
 export default function Review({ rating, date, comment, author }: ReviewProps) {
   return (
-    <div className="flex flex-col justify-between bg-white shadow shadow-black p-5 w-full">
+    <div className="flex flex-col justify-between bg-white shadow shadow-black p-5 w-full break-inside-avoid mb-7">
       <div className="flex gap-0.5 text-yellow-400">
         {Array.from({ length: rating }).map((_, index) => (
           <svg
