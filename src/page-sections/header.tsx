@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-secondary-bg">
-      <div className="flex bg-secondary-bg justify-between items-center mx-auto py-2 px-8">
+      <div className="flex bg-secondary-bg justify-between items-center mx-auto p-2 md:px-8">
         <Link href="/" className="hover:opacity-40">
           <img
             src="/Ey-Dress-Blanco.webp"
