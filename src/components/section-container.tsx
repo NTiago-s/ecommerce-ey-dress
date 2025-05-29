@@ -11,7 +11,7 @@ export default function SectionContainer({
 }: SectionContainerProps) {
   return (
     <section
-      className="flex justify-center py-6 px-2 md:py-12 md:px-4"
+      className="flex w-full justify-center py-6 px-2 md:py-12 md:px-4"
       id={idContainer}
     >
       {children}
