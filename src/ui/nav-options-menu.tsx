@@ -19,7 +19,7 @@ export default function NavOptionsMenu({ data, onClick }: NavOptionsMenuProps) {
           href={option.href}
           aria-label={option.title}
           title={option.title}
-          className="text-primary-txt hover:bg-primary/10 px-4 py-2 flex items-center gap-2 rounded-xl transition"
+          className="text-primary-txt text-sm md:text-base hover:bg-primary/10 px-4 py-2 flex items-center gap-2 rounded-xl transition"
           onClick={onClick}
         >
           <option.icon /> {option.title}
