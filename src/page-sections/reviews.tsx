@@ -28,7 +28,10 @@ export default function Reviews() {
   return (
     <div className="flex flex-col w-full max-w-screen-xl gap-4 p-2">
       <Title>Reseñas</Title>
-      <div className="flex flex-col gap-3 md:columns-3 md:gap-6">
+      <div
+        className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-6"
+        style={{ gridTemplateRows: "auto 1fr auto" }}
+      >
         {displayedReviews.map((review, index) => (
           <Review
             key={index}
@@ -41,10 +44,10 @@ export default function Reviews() {
       </div>
 
       {isMobile && visibleCount < reviewsData.length && (
-        <div className="mt-6 flex justify-center">
+        <div className="flex justify-center">
           <button
             onClick={handleLoadMore}
-            className="rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 transition cursor-pointer"
+            className="rounded bg-blue-600 px-3 py-2 text-sm text-white hover:bg-blue-700 transition cursor-pointer"
           >
             Cargar más
           </button>

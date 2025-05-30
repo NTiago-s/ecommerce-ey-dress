@@ -25,14 +25,18 @@ export default function Review({ rating, date, comment, author }: ReviewProps) {
       </div>
 
       <div className="mt-4">
-        <p className="text-xs font-semibold text-blue-700">
+        <p className="text-xs md:text-sm font-semibold text-blue-700">
           {timeAgo(new Date(date))}
         </p>
 
-        <p className="mt-1.5 leading-relaxed text-gray-500">{comment}</p>
+        <p className="mt-1.5 text-xs md:text-base leading-relaxed text-gray-500">
+          {comment}
+        </p>
       </div>
 
-      <div className="mt-5 text-sm leading-5 text-gray-500">— {author}</div>
+      <div className="mt-5 text-xs md:text-base leading-5 text-gray-500">
+        — {author}
+      </div>
     </div>
   );
 }
