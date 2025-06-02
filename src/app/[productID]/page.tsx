@@ -33,14 +33,16 @@ export default function ProductDetail({
     product.stock.find((s: any) => s.color === selectedColor)?.images || [];
 
   return (
-    <section className="m-10">
-      <div className="flex max-w-7xl mx-auto bg-white rounded shadow-xl justify-around p-10">
+    <section className="m-4 md:m-10">
+      <div className="flex flex-col md:flex-row max-w-7xl bg-white rounded gap-10 shadow-xl justify-around p-4 md:p-10">
         <div>
           <ImageGallery images={filteredImages} />
         </div>
 
-        <div className="flex flex-col gap-4 border-l pl-4">
-          <h2 className="font-semibold text-3xl">{product.name}</h2>
+        <div className="flex flex-col gap-4 border-t md:border-l pl-4">
+          <h2 className="font-semibold text-lg md:text-3xl mt-4">
+            {product.name}
+          </h2>
           <span className="text-lg">{NumberFormat(product.price)}</span>
           <div className="flex items-center gap-4">
             <CartButton
