@@ -34,7 +34,7 @@ export default function ProductDetail({
 
   return (
     <section className="m-4 md:m-10">
-      <div className="flex flex-col md:flex-row max-w-7xl bg-white rounded gap-10 shadow-xl justify-around p-4 md:p-10">
+      <div className="flex flex-col md:flex-row max-w-7xl mx-auto bg-white rounded gap-10 shadow-xl justify-around p-4 md:p-10">
         <div>
           <ImageGallery images={filteredImages} />
         </div>
